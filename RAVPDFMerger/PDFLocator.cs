@@ -12,7 +12,7 @@ namespace RAVPDFMerger
             this.directoryPath = directoryPath;
         }
 
-        public string[] getAllPDFInDirectory()
+        public string[] getAllPdfInDirectory()
         {
             //TODO: Add code for the case if there is no PDF at all and other checks
             string[] filePaths = Directory.GetFiles(directoryPath, "*.pdf");

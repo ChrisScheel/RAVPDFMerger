@@ -1,15 +1,14 @@
 ﻿using Aspose.Pdf.Facades;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RAVPDFMerger
 {
     class PDFMerger
-    {
-        /*
-         * PdfFileEditor rAV_PDF = new PdfFileEditor();
-        rAV_PDF.Concatenate(filesArray, "merged.pdf");
-        */
+    {        
+        //TODO: Copy code from main method into the method of this class
+        /*public string pdfMerger()
+        {
+            PdfFileEditor ravPdf = new PdfFileEditor();
+            ravPdf.Concatenate(allPdfInDirectory, "merged.pdf");
+        }*/
     }
 }
