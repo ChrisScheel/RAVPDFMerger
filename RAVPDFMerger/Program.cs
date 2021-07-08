@@ -1,5 +1,4 @@
-﻿using Aspose.Pdf;
-using Aspose.Pdf.Facades;
+﻿using Aspose.Pdf.Facades;
 using System;
 
 namespace RAVPDFMerger
@@ -15,11 +14,13 @@ namespace RAVPDFMerger
             string[] allPdfInDirectory = pdfLocator.getAllPdfInDirectory();
 
             PdfFileEditor ravPdf = new PdfFileEditor();
-            ravPdf.Concatenate(allPdfInDirectory, "merged.pdf");
-            Document final = new Document();
-            //TODO: Find out how to save the merged pdf
-            final = ravPdf;
-            final.Save(directoryPath);
+            //the following code creates a merged pdf and saves it with the name directory+super.pdf in a directory above.
+            //TODO: Find out why?
+            ravPdf.Concatenate(allPdfInDirectory, directoryPath + "super.pdf");
+            //the following code doesn't create a pdf:
+            //ravPdf.Concatenate(allPdfInDirectory, "super.pdf");
+
+            Console.WriteLine("PDF merged");
         }
     }
 }
