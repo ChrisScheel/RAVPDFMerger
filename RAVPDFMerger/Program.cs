@@ -11,16 +11,14 @@ namespace RAVPDFMerger
             string directoryPath = Console.ReadLine();
 
             PDFLocator pdfLocator = new PDFLocator(directoryPath);
-            string[] allPdfInDirectory = pdfLocator.getAllPdfInDirectory();
+            string[] allPdfInDirectory = pdfLocator.GetAllPdfInDirectory();
 
             PdfFileEditor ravPdf = new PdfFileEditor();
-            //the following code creates a merged pdf and saves it with the name directory+super.pdf in a directory above.
-            //TODO: Find out why?
-            ravPdf.Concatenate(allPdfInDirectory, directoryPath + "super.pdf");
-            //the following code doesn't create a pdf:
-            //ravPdf.Concatenate(allPdfInDirectory, "super.pdf");
+            //the following code creates a merged pdf and saves it with the name "directory+_RAV.pdf" in the superior directory.
+            //other solutions don't work due to license problems. I use a trial version of aspose.pdf.
+            ravPdf.Concatenate(allPdfInDirectory, directoryPath + "_RAV.pdf");
 
-            Console.WriteLine("PDF merged");
+            Console.WriteLine("\nPDFs merged");
         }
     }
 }

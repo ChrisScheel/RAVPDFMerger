@@ -12,10 +12,16 @@ namespace RAVPDFMerger
             this.directoryPath = directoryPath;
         }
 
-        public string[] getAllPdfInDirectory()
+        public string[] GetAllPdfInDirectory()
         {
-            //TODO: Add code for the case if there is no PDF at all and other checks
+            //TODO: Add code for the case if there is no valid directory
             string[] filePaths = Directory.GetFiles(directoryPath, "*.pdf");
+
+            if (filePaths == null || filePaths.Length == 0)
+            {
+                Console.WriteLine("\nYour chosen directory doesn't contain a PDF. The program will be closed.");
+                Environment.Exit(0);
+            }
             return filePaths;
         }
 
