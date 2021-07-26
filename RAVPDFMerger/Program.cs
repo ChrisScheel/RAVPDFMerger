@@ -18,7 +18,7 @@ namespace RAVPDFMerger
             //other solutions don't work due to license problems. I use a trial version of aspose.pdf.
             ravPdf.Concatenate(allPdfInDirectory, directoryPath + "_RAV.pdf");
 
-            Console.WriteLine("\nPDFs merged");
+            Console.WriteLine("\nPDF documents merged into one");
         }
     }
 }
