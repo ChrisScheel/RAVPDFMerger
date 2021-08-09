@@ -15,7 +15,7 @@ namespace RAVPDFMerger
 
             PdfFileEditor ravPdf = new PdfFileEditor();
             //the following code creates a merged pdf and saves it with the name "directory+_RAV.pdf" in the superior directory.
-            //other solutions don't work due to license problems. I use a trial version of aspose.pdf.
+            //the trial version of aspose.pdf creates a watermark in the upper left corner of every page.
             ravPdf.Concatenate(allPdfInDirectory, directoryPath + "_RAV.pdf");
 
             Console.WriteLine("\nPDF documents merged into one");
